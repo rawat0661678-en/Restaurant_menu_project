@@ -109,15 +109,23 @@ function Addtocart() {
     },
   ];
 
-  const [data, setdata] = useState("");
+  const [data, setdata] = useState(0);
 
   function handleleft() {
-    
-    setdata((prevPosition) => prevPosition - 340);
-  }
+    console.log(data)
+    if (data >= -3010){
 
+      setdata((prevPosition) => prevPosition - 340);
+    }
+    
+  }
+  
   function handleright() {
-    setdata((prevPosition) => prevPosition + 340);
+  
+if(data <= -340){
+  setdata((prevPosition) =>  prevPosition + 340);
+
+}
   }
 
   return (
@@ -148,6 +156,7 @@ function Addtocart() {
               <button  onClick={handleleft}>
                 <FaArrowAltCircleRight className="h-10 w-15" />
               </button>
+              
             
             </div>
           

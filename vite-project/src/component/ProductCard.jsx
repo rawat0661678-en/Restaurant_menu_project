@@ -492,6 +492,26 @@ const handleall = ()=>{
   let item =fooditem
   setfoodArr(item)
 }
+
+const [cart , setcart] = useState([]);
+
+const handleaddcart = (fooditem)=>{
+  setcart((prev) => {
+    const itemexit = prev.find((item) => item.id === fooditem.id);
+
+    if(itemexit){
+        return prev.map((item)=>
+        item.id === fooditem.id
+        ?{...item,quentity:item.quentity+1}
+        : item
+      );
+    }
+    return [...prev ,{ ...fooditem , quentity : 1}];
+  })
+  console.log(cart)
+    
+}
+
   return(
 
     <>
@@ -508,7 +528,7 @@ const handleall = ()=>{
 
   <div className="row">
     <div className='grid grid-cols-4 gap-3 m-2'>
-      {foodArr.map((v) => <Card key={v.id || v.title} Product={v} />)}
+      {foodArr.map((v) => <Card key={v.id || v.title} Product={v}  handleaddcartfun={handleaddcart} />)}
     </div>
   </div>
 </>

@@ -1,6 +1,7 @@
-import React from 'react';
+import React , { useState } from 'react';
 
-function Card({Product}){
+function Card({Product,handleaddcartfun}){
+
     return(
         <>
             <div className="container ">
@@ -14,7 +15,7 @@ function Card({Product}){
                         <p className="text-gray-800 font-medium">{Product.category}</p>
 
                     </div>
-                    <button className ='px-6 py-3 bg-blue-400 to-violet-600 text-black font-semibold rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-[1.02] ' >Add To Card</button>
+                    <button className ='px-6 py-3 bg-blue-400 to-violet-600 text-black font-semibold rounded-xl shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-[1.02] ' onClick={() => handleaddcartfun(Product)} >Add To Card</button>
                 </div>
                 </div>
             

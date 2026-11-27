@@ -2,6 +2,7 @@ import React from 'react'
 import Navfood from './component/Navfood'
 import ProductCard from './component/ProductCard'
 import Addtocart from './component/Addtocart'
+import Footer from './component/Footer'
 
 
 
@@ -12,6 +13,7 @@ function App() {
       
       <ProductCard/>
       <Addtocart/>
+      <Footer/>
       
     </div>
   )

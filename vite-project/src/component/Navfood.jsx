@@ -7,7 +7,7 @@ import { MdQrCodeScanner } from "react-icons/md";
 
 
 
-function Navfood() {
+function Navfood(product) {
   return (
     <>
     <nav className=" bg-violet-400 ">
@@ -20,7 +20,7 @@ function Navfood() {
     <div className="navbar_name text-5xl text-center my-auto font-serif font-semibold " >Restorent Menu </div>
     <div className='w-30 h-20 m-2 rounded-xl'><MdQrCodeScanner  className='h-20 w-30'/></div>
     <div className="addtocart my-4 ">
-       <button ><FaCartArrowDown  className='h-7 w-10 m-2 ' /></button> 
+       <button ><FaCartArrowDown  className='h-7 w-10 m-2 '/></button> 
     </div>
     </div>
 </nav>
